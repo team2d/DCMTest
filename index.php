@@ -14,9 +14,10 @@ id
 cardId
 objName
 cost
+operTime
 
 CREATE TABLE `cards` ( `id` INT AUTO_INCREMENT, `series` TEXT, `number` INT, `issueDate` INT, `expirationDate` INT, `status` INT, PRIMARY KEY( `id` ));
-CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `objName` LONGTEXT, `cost` INT, PRIMARY KEY( `id` ))
+CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `objName` TEXT, `cost` INT, `operTime` INT, PRIMARY KEY( `id` ))
 
 (card profile page) queries/selects:
 last card usage date
