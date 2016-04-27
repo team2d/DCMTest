@@ -21,8 +21,10 @@ name
 cost
 
 CREATE TABLE `cards` ( `id` INT AUTO_INCREMENT, `series` TEXT, `number` INT, `issueDate` INT, `expirationDate` INT, `status` INT, PRIMARY KEY( `id` ));
-CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `articleId` TEXT, `operTime` INT, PRIMARY KEY( `id` ))
+CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `articleId` INT, `operTime` INT, PRIMARY KEY( `id` ))
 CREATE TABLE `articles` ( `id` INT AUTO_INCREMENT, `name` TEXT, `cost` REAL, PRIMARY KEY( `id` ))
+INSERT INTO `cards` (`series` ,`number` ,`issueDate` ,`expirationDate` ,`status`)VALUES ('asc',  '123456',  '363453456',  '456345634',  '1');
+INSERT INTO `purchases` (`cardId` ,`articleId`, `operTime`)VALUES ('1', '1', '567457637');
 
 (card profile page) queries/selects:
 last card usage date
@@ -34,9 +36,6 @@ activation
 deactivation
 deletion
 list(Search by the fields above)(limit n,25)
-
-INSERT INTO `cards` (`series` ,`number` ,`issueDate` ,`expirationDate` ,`status`)VALUES ('asc',  '123456',  '363453456',  '456345634',  '1');
-INSERT INTO `purchases` (`cardId` ,`objName` ,`cost` ,`operTime`)VALUES ('1',  'Pen',  '100.4',  '567457637');
 
 scripts:
 mock data adder
