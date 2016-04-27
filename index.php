@@ -1,6 +1,6 @@
 <?php
 /*
-db: mysql(Search by the fields above)(limit n,25)
+db: mysql
 -=cards=-
 id
 series - TINYTEXT (3 uppercase letters)
@@ -15,6 +15,9 @@ cardId
 objName
 cost
 
+CREATE TABLE `cards` ( `id` INT AUTO_INCREMENT, `series` TEXT, `number` INT, `issueDate` INT, `expirationDate` INT, `status` INT, PRIMARY KEY( `id` ));
+CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `objName` LONGTEXT, `cost` INT, PRIMARY KEY( `id` ))
+
 (card profile page) queries/selects:
 last card usage date
 total purchases amount
@@ -24,11 +27,10 @@ card purchase history
 activation
 deactivation
 deletion
-list
+list(Search by the fields above)(limit n,25)
 
 scripts:
 mock data adder
-
 
 html\js:
 cardList:listtable:AJAX:onstartExpiredCheckMarkerFunc
