@@ -12,12 +12,17 @@ status (active / inactive / expired) (1/2/3) TINYINT
 -=purchases=-
 id
 cardId
-objName
-cost
+articleId
 operTime
 
+-=articles=-
+id
+name
+cost
+
 CREATE TABLE `cards` ( `id` INT AUTO_INCREMENT, `series` TEXT, `number` INT, `issueDate` INT, `expirationDate` INT, `status` INT, PRIMARY KEY( `id` ));
-CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `objName` TEXT, `cost` REAL, `operTime` INT, PRIMARY KEY( `id` ))
+CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `articleId` TEXT, `operTime` INT, PRIMARY KEY( `id` ))
+CREATE TABLE `articles` ( `id` INT AUTO_INCREMENT, `name` TEXT, `cost` REAL, PRIMARY KEY( `id` ))
 
 (card profile page) queries/selects:
 last card usage date
