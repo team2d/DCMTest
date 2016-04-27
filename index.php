@@ -20,7 +20,7 @@ id
 name
 cost
 
-CREATE TABLE `cards` ( `id` INT AUTO_INCREMENT, `series` TEXT, `number` INT, `issueDate` INT, `expirationDate` INT, `status` INT, PRIMARY KEY( `id` ));
+CREATE TABLE `cards` ( `id` INT AUTO_INCREMENT, `series` TEXT, `number` TEXT, `issueDate` INT, `expirationDate` INT, `status` INT, PRIMARY KEY( `id` ));
 CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `articleId` INT, `operTime` INT, PRIMARY KEY( `id` ))
 CREATE TABLE `articles` ( `id` INT AUTO_INCREMENT, `name` TEXT, `cost` REAL, PRIMARY KEY( `id` ))
 INSERT INTO `cards` (`series` ,`number` ,`issueDate` ,`expirationDate` ,`status`)VALUES ('asc',  '123456',  '363453456',  '456345634',  '1');
