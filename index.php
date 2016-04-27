@@ -17,7 +17,7 @@ cost
 operTime
 
 CREATE TABLE `cards` ( `id` INT AUTO_INCREMENT, `series` TEXT, `number` INT, `issueDate` INT, `expirationDate` INT, `status` INT, PRIMARY KEY( `id` ));
-CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `objName` TEXT, `cost` INT, `operTime` INT, PRIMARY KEY( `id` ))
+CREATE TABLE `purchases` ( `id` INT AUTO_INCREMENT, `cardId` INT, `objName` TEXT, `cost` REAL, `operTime` INT, PRIMARY KEY( `id` ))
 
 (card profile page) queries/selects:
 last card usage date
@@ -29,6 +29,9 @@ activation
 deactivation
 deletion
 list(Search by the fields above)(limit n,25)
+
+INSERT INTO `cards` (`series` ,`number` ,`issueDate` ,`expirationDate` ,`status`)VALUES ('asc',  '123456',  '363453456',  '456345634',  '1');
+INSERT INTO `purchases` (`cardId` ,`objName` ,`cost` ,`operTime`)VALUES ('1',  'Pen',  '100.4',  '567457637');
 
 scripts:
 mock data adder
